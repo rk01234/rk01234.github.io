@@ -1,0 +1,223 @@
+<!-- 手直ししたいところいっぱいあるけど公開してみる -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nincolle Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/JavaScript">
+        var dataMapping = {}; // グローバル変数の定義
+
+        window.onload = function() {
+            loadData();
+            let hash = decodeURIComponent(window.location.hash.substring(1)); // "#"を除去し、デコード
+            document.getElementById('userInput').value = hash;
+            if (hash && isJsonString(hash)) {
+                let jsonData = JSON.parse(hash);
+                document.getElementById('submitButton').click();
+            }
+        }
+        function isJsonString(str) {
+            try {
+                JSON.parse(str);
+            } catch (e) {
+                return false;
+            }
+            return true;
+        }
+
+        function loadData() {
+            fetch('quest_detail.json')
+                .then(response => response.json())
+                .then(data => {
+                    dataMapping.quest = data;
+                    console.log("loaded quest_detail.json");
+                    console.log(dataMapping.quest);
+                    return fetch('ships_detail.csv');
+                })
+                .then(response => response.text())
+                .then(data => {
+                    dataMapping.ships = data.split(/\r\n|\n/).map((row, index) => [0, ...row.split(',')]);
+                    console.log("loaded ships_detail.csv");
+                    console.log(dataMapping.ships);
+                });
+        }
+    </script>
+</head>
+<body>
+
+<h1>Nincolle Viewer</h1>
+
+<!-- データ入力フォームの追加 -->
+<form id="data-input-form">
+    <textarea 
+    id="userInput" rows="4" cols="50"
+    placeholder='questlistのresponceを入れてください。&#13;&#10;index.html#{"api_no_list":[1,2,3]}&#13;&#10;index.html#{"api_id_list":[A1,B5,C1]}&#13;&#10;のような使い方もできます。混ぜることはできません。'></textarea>
+    <button id="submitButton" type="button" onclick="processInput()">Submit</button>
+    <label><input type="checkbox" id="shipsDisplay"> 必要艦表示</label>
+    <label><input type="checkbox" id="idOnlyMode" checked> ID Only Mode</label>
+</form>
+
+<div id="grid">
+    <div></div>
+    <div class="fixed">鎮守府海域</div>
+    <div class="fixed">南西諸島海域</div>
+    <div class="fixed">北方海域</div>
+    <div class="fixed">南西海域</div>
+    <div class="fixed">西方海域</div>
+    <div class="fixed">南方海域</div>
+    <div class="fixed">中部海域</div>
+    <!-- <div class="fixed">1</div> -->
+    
+    <div></div>
+    <div class="fixed">1</div>
+    <div class="fixed">2</div>
+    <div class="fixed">3</div>
+    <div class="fixed">7</div>
+    <div class="fixed">4</div>
+    <div class="fixed">5</div>
+    <div class="fixed">6</div>
+
+    <div class="fixed">1</div>
+    <div id="cell-1-1" class="grid-cell"></div>
+    <div id="cell-2-1" class="grid-cell"></div>
+    <div id="cell-3-1" class="grid-cell"></div>
+    <div id="cell-7-1" class="grid-cell"></div>
+    <div id="cell-4-1" class="grid-cell"></div>
+    <div id="cell-5-1" class="grid-cell"></div>
+    <div id="cell-6-1" class="grid-cell"></div>
+
+    <div class="fixed">2</div>
+    <div id="cell-1-2" class="grid-cell"></div>
+    <div id="cell-2-2" class="grid-cell"></div>
+    <div id="cell-3-2" class="grid-cell"></div>
+    <div id="split-stage">
+        <div class="fixed">1</div>
+        <div id="cell-7-2-1" class="grid-cell"></div>
+        <div class="fixed">2</div>
+        <div id="cell-7-2-2" class="grid-cell"></div>
+    </div>
+    <div id="cell-4-2" class="grid-cell"></div>
+    <div id="cell-5-2" class="grid-cell"></div>
+    <div id="cell-6-2" class="grid-cell"></div>
+
+    <div class="fixed">3</div>
+    <div id="cell-1-3" class="grid-cell"></div>
+    <div id="cell-2-3" class="grid-cell"></div>
+    <div id="cell-3-3" class="grid-cell"></div>
+    <div id="split-stage">
+        <div class="fixed">1</div>
+        <div id="cell-7-3-1" class="grid-cell"></div>
+        <div class="fixed">2</div>
+        <div id="cell-7-3-2" class="grid-cell"></div>
+    </div>
+    <div id="cell-4-3" class="grid-cell"></div>
+    <div id="cell-5-3" class="grid-cell"></div>
+    <div id="cell-6-3" class="grid-cell"></div>
+
+    <div class="fixed">4</div>
+    <div id="cell-1-4" class="grid-cell"></div>
+    <div id="cell-2-4" class="grid-cell"></div>
+    <div id="cell-3-4" class="grid-cell"></div>
+    <div id="cell-7-4" class="grid-cell"></div>
+    <div id="cell-4-4" class="grid-cell"></div>
+    <div id="cell-5-4" class="grid-cell"></div>
+    <div id="cell-6-4" class="grid-cell"></div>
+
+    <div class="fixed">5</div>
+    <div id="cell-1-5" class="grid-cell"></div>
+    <div id="cell-2-5" class="grid-cell"></div>
+    <div id="cell-3-5" class="grid-cell"></div>
+    <div id="split-stage">
+        <div class="fixed">1</div>
+        <div id="cell-7-5-1" class="grid-cell"></div>
+        <div class="fixed">2</div>
+        <div id="cell-7-5-2" class="grid-cell"></div>
+        <div class="fixed">3</div>
+        <div id="cell-7-5-3" class="grid-cell"></div>
+    </div>
+    <div id="cell-4-5" class="grid-cell"></div>
+    <div id="cell-5-5" class="grid-cell"></div>
+    <div id="cell-6-5" class="grid-cell"></div>
+
+    <div class="fixed">6</div>
+    <div id="cell-1-6" class="grid-cell"></div>
+    <div id="cell-2-6" class="grid-cell">進出不可</div>
+    <div id="cell-3-6" class="grid-cell">進出不可</div>
+    <div id="cell-7-6" class="grid-cell">進出不可</div>
+    <div id="cell-4-6" class="grid-cell">進出不可</div>
+    <div id="cell-5-6" class="grid-cell">進出不可</div>
+    <div id="cell-6-6" class="grid-cell">進出不可</div>
+
+    <div class="fixed">7</div>
+    <div id="cell-1-7" class="grid-cell">進出不可</div>
+    <div id="cell-2-7" class="grid-cell">進出不可</div>
+    <div id="cell-3-7" class="grid-cell">進出不可</div>
+    <div id="cell-7-7" class="grid-cell">進出不可</div>
+    <div id="cell-4-7" class="grid-cell">進出不可</div>
+    <div id="cell-5-7" class="grid-cell">進出不可</div>
+    <div id="cell-6-7" class="grid-cell">進出不可</div>
+    <!-- data-->
+</div>
+
+    <div id="json-values-display"></div>
+
+    <!-- テキストボックスとコピーするボタンの追加 -->
+<div id="harfDisplay">
+    <div>
+        <div id="mandatory_ships-title" onclick="toggleDisplayMandatory()">>>必要艦</div>
+        <div id="mandatory_ships-display" style="display: none;"></div>
+        <!-- "必要艦"という文字をクリックすると表示・非表示が切り替わるようにします -->
+        <textarea id="copy-textA" rows="4" cols="50"></textarea>
+        <br>
+        <button id="copy-buttonA" onclick="copyTextA()">コピー</button>
+    </div>
+    <div>
+        <div id="selectable_ships-title" onclick="toggleDisplaySelectable()">>>選択艦</div>
+        <div id="selectable_ships-display" style="display: none;"></div>
+        <textarea id="copy-textB" rows="4" cols="50"></textarea>
+        <br>
+        <button id="copy-buttonB" onclick="copyTextB()">コピー</button>
+
+    </div>
+</div>
+<div id="nonValueQuests"></div>
+<!-- 新しい JavaScript ファイルを読み込む -->
+<script src="script.js"></script>
+<script>
+    // テキストボックスの内容をコピーする関数
+    function copyTextA() {
+        var copyTextA = document.getElementById("copy-textA");
+        copyTextA.select();
+        document.execCommand("copy");
+    }
+    // 表示・非表示を切り替える関数
+    function toggleDisplayMandatory() {
+        let displayElement = document.getElementById('mandatory_ships-display');
+        if (displayElement.style.display === "none") {
+            displayElement.style.display = "block";
+        } else {
+            displayElement.style.display = "none";
+        }
+    }
+
+    // テキストボックスBの内容をコピーする関数
+    function copyTextB() {
+        var copyTextB = document.getElementById("copy-textB");
+        copyTextB.select();
+        document.execCommand("copy");
+    }
+    // 表示・非表示を切り替える関数
+    function toggleDisplaySelectable() {
+        let displayElement = document.getElementById('selectable_ships-display');
+        if (displayElement.style.display === "none") {
+            displayElement.style.display = "block";
+        } else {
+            displayElement.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
