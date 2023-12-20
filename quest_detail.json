@@ -3239,6 +3239,29 @@
       "6-5"
     ]
   },
+  "284": {
+    "api_bonus_flag": 1,
+    "api_category": 2,
+    "api_detail": "海上警備任務：軽空母または軽巡級1隻、駆逐艦または海防艦を計3隻以上配備した海上護衛艦隊で、<br>南1号作戦、南西諸島哨戒、柳作戦、オリョール哨戒を実施、各作戦海域に出没する敵を撃滅せよ！",
+    "api_get_material": [
+      0,
+      800,
+      800,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 7,
+    "api_title": "南西諸島方面「海上警備行動」発令！",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Bq11",
+    "mandatory_stage": [
+      "1-4",
+      "2-1",
+      "2-2",
+      "2-3"
+    ]
+  },
   "285": {
     "api_bonus_flag": 1,
     "api_category": 2,
