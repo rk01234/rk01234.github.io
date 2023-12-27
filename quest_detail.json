@@ -1,4 +1,34 @@
 {
+  "1003": {
+    "api_bonus_flag": 1,
+    "api_category": 10,
+    "api_detail": "USS潜水艦「Salmon」または「Scamp」を旗艦とした艦隊で、南西諸島沖海域、製油所地帯沿岸、<br>東部オリョール海、北方モーレイ海の戦闘哨戒を実施！各海域の敵艦隊を痛打！これを撃滅せよ！",
+    "api_get_material": [
+      400,
+      0,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "【潜水艦任務】潜水艦、戦闘哨戒！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "B195",
+    "mandatory_stage": [
+      "1-2",
+      "1-3",
+      "2-3",
+      "3-1"
+    ],
+    "selectable_ships": {
+      "count": "1",
+      "ships": [
+        "Salmon",
+        "Scamp"
+      ]
+    }
+  },
   "101": {
     "api_category": 1,
     "api_detail": "２隻以上の艦で構成される「艦隊」を編成せよ！",
@@ -24,6 +54,7 @@
     "api_type": 4
   },
   "103": {
+    "api_bonus_flag": 1,
     "api_category": 1,
     "api_detail": "軽巡洋艦を旗艦とし、数隻の駆逐艦で構成される「水雷戦隊」を編成せよ！",
     "api_get_material": [
@@ -32,8 +63,12 @@
       0,
       40
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "「水雷戦隊」を編成せよ！",
-    "api_type": 4
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "A3"
   },
   "104": {
     "api_category": 1,
@@ -139,6 +174,23 @@
       "羽黒"
     ]
   },
+  "1105": {
+    "api_bonus_flag": 1,
+    "api_category": 11,
+    "api_detail": "九六式や一式陸攻等の陸上攻撃機x3廃棄、弾薬x2,800と「九七式艦攻」「天山」各x4を準備せよ！<br>※任務達成後、用意した弾薬及び必要装備(低改修値のもの優先)は消費します。",
+    "api_get_material": [
+      0,
+      0,
+      0,
+      400
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 107,
+    "api_title": "夏の格納庫整備＆航空基地整備",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Fy7"
+  },
   "1107": {
     "api_bonus_flag": 1,
     "api_category": 11,
@@ -192,6 +244,23 @@
     "api_voice_id": 0,
     "id": "F105"
   },
+  "1112": {
+    "api_bonus_flag": 1,
+    "api_category": 11,
+    "api_detail": "「小口径主砲」「中口径主砲」「大口径主砲」各x4装備を廃棄、ドラム缶(輸送用)x1、開発資材x10<br>鋼材1,800を準備せよ！(任務達成後、準備した資源・ドラム缶(輸送用)・開発資材は消費)",
+    "api_get_material": [
+      0,
+      650,
+      0,
+      550
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "鎮守府「大掃除」祭り！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "F106"
+  },
   "1113": {
     "api_bonus_flag": 1,
     "api_category": 11,
@@ -244,6 +313,22 @@
     "api_type": 5,
     "api_voice_id": 0,
     "id": "Fy9"
+  },
+  "1121": {
+    "api_bonus_flag": 1,
+    "api_category": 11,
+    "api_detail": "【年末年始鎮守府大掃除】「小口径主砲」「中口径主砲」「水上偵察機」x各8を廃棄。<br>「九六式艦戦」x6、「戦闘糧食」x4、鋼材2,023を準備、提督の皆さん、よいお年を！",
+    "api_get_material": [
+      1000,
+      0,
+      0,
+      1000
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "【年末年始】鎮守府大掃除！良いお年を！",
+    "api_type": 4,
+    "api_voice_id": 0
   },
   "1123": {
     "api_bonus_flag": 1,
@@ -1753,27 +1838,19 @@
   "201": {
     "api_bonus_flag": 1,
     "api_category": 2,
-    "api_detail": "艦隊を南西諸島海域に全力出撃させ、多数の敵艦隊「主力」群を捕捉、撃滅せよ！",
+    "api_detail": "艦隊を出撃させ、敵艦隊を捕捉、これを撃滅せよ！",
     "api_get_material": [
-      300,
+      50,
+      50,
       0,
-      0,
-      200
+      0
     ],
     "api_invalid_flag": 0,
     "api_label_type": 2,
-    "api_progress_flag": 0,
-    "api_title": "南西諸島海域の制海権を握れ！",
+    "api_title": "敵艦隊を撃破せよ！",
     "api_type": 1,
     "api_voice_id": 0,
-    "id": "Bd7",
-    "selectable_stage": [
-      "2-1",
-      "2-2",
-      "2-3",
-      "2-4",
-      "2-5"
-    ]
+    "id": "Bd1"
   },
   "202": {
     "api_category": 2,
@@ -1805,6 +1882,7 @@
     ]
   },
   "204": {
+    "api_bonus_flag": 1,
     "api_category": 2,
     "api_detail": "南西諸島沖に艦隊を出撃させ、敵艦隊と交戦せよ！",
     "api_get_material": [
@@ -1813,8 +1891,11 @@
       0,
       0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "南西諸島沖に出撃せよ！",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "B4",
     "mandatory_stage": [
       "1-2"
@@ -2049,6 +2130,7 @@
     "id": "Bw2"
   },
   "221": {
+    "api_bonus_flag": 1,
     "api_category": 2,
     "api_detail": "1週間の全力出撃を行い、敵輸送船団を捕捉・撃滅、敵の補給路を寸断せよ！",
     "api_get_material": [
@@ -2057,8 +2139,11 @@
       800,
       0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 3,
     "api_title": "ろ号作戦",
     "api_type": 2,
+    "api_voice_id": 0,
     "id": "Bw4"
   },
   "222": {
@@ -3547,16 +3632,20 @@
     "id": "Cw1"
   },
   "303": {
+    "api_bonus_flag": 1,
     "api_category": 3,
     "api_detail": "本日中に他の司令官の艦隊に対して3回「演習」を挑もう！",
     "api_get_material": [
       50,
       0,
-      0,
-      50
+      50,
+      0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 2,
     "api_title": "「演習」で練度向上！",
     "api_type": 1,
+    "api_voice_id": 0,
     "id": "Cd1"
   },
   "304": {
@@ -4476,6 +4565,7 @@
     "id": "F4"
   },
   "605": {
+    "api_bonus_flag": 1,
     "api_category": 6,
     "api_detail": "「工廠」で装備アイテムを新たに「開発」しよう(失敗もOK)！",
     "api_get_material": [
@@ -4484,8 +4574,11 @@
       40,
       40
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 2,
     "api_title": "新装備「開発」指令",
     "api_type": 1,
+    "api_voice_id": 0,
     "id": "Fd1"
   },
   "606": {
@@ -5334,6 +5427,7 @@
     "id": "F59"
   },
   "668": {
+    "api_bonus_flag": 1,
     "api_category": 6,
     "api_detail": "料理任務：手軽に食事をとることができて、なおかつ美味しく腹にがっつりたまる新型の戦闘糧食を<br>開発する。「戦闘糧食」x2と燃料800及びボーキサイト150を用意せよ！油入れ送気開始！調理始め！",
     "api_get_material": [
@@ -5342,8 +5436,11 @@
       0,
       0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "新型戦闘糧食の試作",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "F60"
   },
   "669": {
@@ -5482,6 +5579,23 @@
     "api_voice_id": 0,
     "id": "Fq5"
   },
+  "679": {
+    "api_bonus_flag": 1,
+    "api_category": 6,
+    "api_detail": "対空兵装の整備拡充を実施する！「中口径主砲」系装備x6、「副砲」系装備x3を廃棄、<br>ボーキサイト900を準備せよ！　※任務達成後、準備した資源は消費します。",
+    "api_get_material": [
+      0,
+      100,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "対空兵装の拡充",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "F71"
+  },
   "680": {
     "api_bonus_flag": 1,
     "api_category": 6,
@@ -5596,6 +5710,40 @@
     "api_type": 4,
     "api_voice_id": 0,
     "id": "F81"
+  },
+  "691": {
+    "api_bonus_flag": 1,
+    "api_category": 6,
+    "api_detail": "提督室のリフォームを実施する！まずは装備の整理から！「中口径主砲」系装備x4、「副砲」系装備x4、<br>「機銃」系装備x4を廃棄、ボーキサイト1,600を準備せよ！　※任務達成後、準備した資源は消費します。",
+    "api_get_material": [
+      200,
+      0,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "提督室のリフォーム",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "F82"
+  },
+  "692": {
+    "api_bonus_flag": 1,
+    "api_category": 6,
+    "api_detail": "水上艦艇装備工廠の整備を実施する！「小口径主砲」系装備x5、「大口径主砲」系装備x5、<br>「水偵」系装備x5を廃棄、鋼材3,000を準備せよ！　※任務達成後、準備した資源は消費します。",
+    "api_get_material": [
+      0,
+      0,
+      0,
+      100
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "水上艦艇装備工廠の整備",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "F83"
   },
   "695": {
     "api_bonus_flag": 1,
@@ -7282,6 +7430,28 @@
       "3-4",
       "4-5",
       "5-3"
+    ]
+  },
+  "910": {
+    "api_bonus_flag": 1,
+    "api_category": 9,
+    "api_detail": "【年末年始哨戒任務】軽巡1隻、駆逐または海防艦計3隻以上を含む哨戒部隊を鎮守府海域に展開。<br>鎮守府正面海域、南西諸島沖海域、製油所地帯沿岸を反復哨戒。年末年始、近海の警戒も厳に！",
+    "api_get_material": [
+      280,
+      280,
+      280,
+      280
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "【年末年始】鎮守府海域哨戒、警戒を厳に！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "2312B1",
+    "mandatory_stage": [
+      "1-1",
+      "1-2",
+      "1-3"
     ]
   },
   "912": {

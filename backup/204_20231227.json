@@ -1,0 +1,16 @@
+{
+  "api_category": 2,
+  "api_detail": "南西諸島沖に艦隊を出撃させ、敵艦隊と交戦せよ！",
+  "api_get_material": [
+    40,
+    40,
+    0,
+    0
+  ],
+  "api_title": "南西諸島沖に出撃せよ！",
+  "api_type": 4,
+  "id": "B4",
+  "mandatory_stage": [
+    "1-2"
+  ]
+}

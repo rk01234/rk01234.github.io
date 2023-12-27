@@ -1,0 +1,13 @@
+{
+  "api_category": 2,
+  "api_detail": "1週間の全力出撃を行い、敵輸送船団を捕捉・撃滅、敵の補給路を寸断せよ！",
+  "api_get_material": [
+    400,
+    0,
+    800,
+    0
+  ],
+  "api_title": "ろ号作戦",
+  "api_type": 2,
+  "id": "Bw4"
+}

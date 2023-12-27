@@ -1,0 +1,25 @@
+{
+  "api_bonus_flag": 1,
+  "api_category": 2,
+  "api_detail": "艦隊を南西諸島海域に全力出撃させ、多数の敵艦隊「主力」群を捕捉、撃滅せよ！",
+  "api_get_material": [
+    300,
+    0,
+    0,
+    200
+  ],
+  "api_invalid_flag": 0,
+  "api_label_type": 2,
+  "api_progress_flag": 0,
+  "api_title": "南西諸島海域の制海権を握れ！",
+  "api_type": 1,
+  "api_voice_id": 0,
+  "id": "Bd7",
+  "selectable_stage": [
+    "2-1",
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5"
+  ]
+}
