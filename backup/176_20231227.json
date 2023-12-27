@@ -1,0 +1,17 @@
+{
+  "api_category": 1,
+  "api_detail": "「朝潮改二丁」及び「大潮改二」を含む艦隊を編成せよ！",
+  "api_get_material": [
+    250,
+    250,
+    0,
+    0
+  ],
+  "api_title": "精鋭！八駆第一小隊！",
+  "api_type": 4,
+  "id": "A71",
+  "mandatory_ships": [
+    "朝潮改二丁",
+    "大潮改二"
+  ]
+}
