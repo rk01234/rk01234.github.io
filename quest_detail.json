@@ -330,6 +330,48 @@
     ],
     "api_invalid_flag": 0,
     "api_label_type": 1,
+    "api_select_rewards": [
+      [
+        {
+          "api_count": 12,
+          "api_kind": 13,
+          "api_mst_id": 3,
+          "api_no": 1
+        },
+        {
+          "api_count": 2,
+          "api_kind": 13,
+          "api_mst_id": 75,
+          "api_no": 2
+        },
+        {
+          "api_count": 2024,
+          "api_kind": 13,
+          "api_mst_id": 34,
+          "api_no": 3
+        }
+      ],
+      [
+        {
+          "api_count": 4,
+          "api_kind": 12,
+          "api_mst_id": 49,
+          "api_no": 1
+        },
+        {
+          "api_count": 2,
+          "api_kind": 13,
+          "api_mst_id": 77,
+          "api_no": 2
+        },
+        {
+          "api_count": 5,
+          "api_kind": 13,
+          "api_mst_id": 4,
+          "api_no": 3
+        }
+      ]
+    ],
     "api_title": "【年末年始】鎮守府大掃除！良いお年を！",
     "api_type": 4,
     "api_voice_id": 0,
@@ -1986,6 +2028,7 @@
     "id": "B9"
   },
   "210": {
+    "api_bonus_flag": 1,
     "api_category": 2,
     "api_detail": "艦隊全力出撃！遊弋する敵艦隊を10回邀撃せよ！",
     "api_get_material": [
@@ -1994,8 +2037,11 @@
       200,
       100
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 2,
     "api_title": "敵艦隊を10回邀撃せよ！",
     "api_type": 1,
+    "api_voice_id": 0,
     "id": "Bd3"
   },
   "211": {
