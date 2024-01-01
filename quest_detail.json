@@ -2183,6 +2183,7 @@
     ]
   },
   "220": {
+    "api_bonus_flag": 1,
     "api_category": 2,
     "api_detail": "有力な母艦航空隊で1週間の全力出撃を行い、可能な限り多くの敵空母を撃滅せよ！",
     "api_get_material": [
@@ -2191,8 +2192,11 @@
       0,
       500
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 3,
     "api_title": "い号作戦",
     "api_type": 2,
+    "api_voice_id": 0,
     "id": "Bw2"
   },
   "221": {
@@ -4218,6 +4222,7 @@
     "id": "Dw2"
   },
   "411": {
+    "api_bonus_flag": 1,
     "api_category": 4,
     "api_detail": "今週中に「東京急行」系遠征を継続的に実施、同種作戦を7回成功させよう！",
     "api_get_material": [
@@ -4226,8 +4231,11 @@
       0,
       400
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 3,
     "api_title": "南方への鼠輸送を継続実施せよ！",
     "api_type": 2,
+    "api_voice_id": 0,
     "id": "Dw3"
   },
   "412": {
@@ -5914,6 +5922,28 @@
     "api_title": "航空艤装の近代化改修",
     "api_type": 4,
     "id": "G5"
+  },
+  "801": {
+    "api_bonus_flag": 1,
+    "api_category": 8,
+    "api_detail": "旗艦に軽巡級、同随伴艦に駆逐艦2隻以上を含む艦隊で抜錨！南西諸島沖、製油所地帯沿岸、<br>南西諸島防衛線に出撃し、各海域の敵艦隊を一掃せよ！　2024年も静かな海を静かなままに！",
+    "api_get_material": [
+      2024,
+      0,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "謹賀新年！2024年、艦隊抜錨せよ！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "2401B1",
+    "mandatory_stage": [
+      "1-2",
+      "1-3",
+      "1-4"
+    ]
   },
   "805": {
     "api_category": 8,
