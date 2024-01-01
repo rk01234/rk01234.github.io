@@ -3921,6 +3921,23 @@
       ]
     }
   },
+  "318": {
+    "api_bonus_flag": 1,
+    "api_category": 3,
+    "api_detail": "伊良湖支援任務：軽巡を2隻以上配備した第一艦隊で本日中に演習で3回「勝利」、その後、<br>第一艦隊旗艦に戦闘糧食を二つ装備せよ！　※任務達成後、同戦闘糧食は消費します",
+    "api_get_material": [
+      100,
+      0,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 6,
+    "api_title": "給糧艦「伊良湖」の支援",
+    "api_type": 3,
+    "api_voice_id": 0,
+    "id": "Cm2"
+  },
   "324": {
     "api_bonus_flag": 1,
     "api_category": 3,
@@ -8054,6 +8071,30 @@
       "2-2",
       "3-5",
       "1-6"
+    ]
+  },
+  "990": {
+    "api_bonus_flag": 1,
+    "api_category": 9,
+    "api_detail": "【年末年始哨戒任務】航空母艦を旗艦、軽巡1隻駆逐2隻以上を含む機動部隊で、南西諸島防衛線、<br>南西諸島近海、バシー海峡、東部オリョール海、沖ノ島海域を哨戒！南西諸島海域を防衛せよ！",
+    "api_get_material": [
+      888,
+      888,
+      888,
+      888
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "【年末年始】機動部隊哨戒、南西諸島を防衛せよ！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "2312B2",
+    "mandatory_stage": [
+      "1-4",
+      "2-1",
+      "2-2",
+      "2-3",
+      "2-4"
     ]
   },
   "993": {
