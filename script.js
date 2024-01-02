@@ -77,7 +77,7 @@ function processAndDisplay(api_no_list) {
     for (let api_no of api_no_list) {
         // data.jsonに存在しない
         if (!(api_no.toString() in dataMapping.quest)) {
-            nonValueQuest.push(api_no);
+            nonValueQuests.push(api_no);
             continue;
         }
         if ('mandatory_stage' in dataMapping.quest[api_no]) {
