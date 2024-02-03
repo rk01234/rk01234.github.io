@@ -1,0 +1,17 @@
+{
+  "api_bonus_flag": 1,
+  "api_category": 4,
+  "api_detail": "節分遠征任務：「タンカー護衛任務」「対潜警戒任務」「海上護衛任務」<br>「北号作戦」「長時間対潜警戒」「囮機動部隊支援作戦」の各遠征を成功させよ！",
+  "api_get_material": [
+    850,
+    650,
+    1000,
+    450
+  ],
+  "api_invalid_flag": 0,
+  "api_label_type": 1,
+  "api_title": "【節分任務:恵方】令和六年節分遠征",
+  "api_type": 4,
+  "api_voice_id": 0,
+  "id": "2401D1"
+}

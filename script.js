@@ -169,11 +169,12 @@ function processAndDisplay(api_no_list) {
                         } else {
                             mandatoryShipsBoard[i][0] = index;
                         }
-                        break;
+                        // break;
                     }
                 }
             }
         }
+        // console.log(mandatoryShipsBoard)
         if ('selectable_ships' in dataMapping.quest[api_no]) {
             selectableShipsDisplay.push(`${dataMapping.quest[api_no]['id']}: ${dataMapping.quest[api_no]['api_title']}`);
             selectableShips = selectableShips.concat(dataMapping.quest[api_no]['selectable_ships']);

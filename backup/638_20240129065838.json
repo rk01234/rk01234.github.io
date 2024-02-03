@@ -1,0 +1,13 @@
+{
+  "api_category": 6,
+  "api_detail": "「機銃」系装備を量産し、工廠で6個廃棄！ 「装備改修」強化をサポートせよ！",
+  "api_get_material": [
+    0,
+    100,
+    0,
+    200
+  ],
+  "api_title": "対空機銃量産",
+  "api_type": 2,
+  "id": "Fw2"
+}

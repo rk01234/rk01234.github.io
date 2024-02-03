@@ -1,0 +1,13 @@
+{
+  "api_category": 5,
+  "api_detail": "戦闘で傷ついた艦を「入渠」させて修理して、次の出撃に備えよう！",
+  "api_get_material": [
+    0,
+    0,
+    30,
+    0
+  ],
+  "api_title": "はじめての「入渠」！",
+  "api_type": 4,
+  "id": "E2"
+}

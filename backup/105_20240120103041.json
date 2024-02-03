@@ -1,0 +1,13 @@
+{
+  "api_category": 1,
+  "api_detail": "軽巡洋艦２隻を擁する高速艦隊を編成せよ！",
+  "api_get_material": [
+    60,
+    60,
+    0,
+    0
+  ],
+  "api_title": "軽巡２隻を擁する隊を編成せよ！",
+  "api_type": 4,
+  "id": "A5"
+}

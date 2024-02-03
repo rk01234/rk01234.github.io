@@ -1,0 +1,13 @@
+{
+  "api_category": 6,
+  "api_detail": "「工廠」で不要な艦を「解体」してみよう！",
+  "api_get_material": [
+    60,
+    60,
+    60,
+    60
+  ],
+  "api_title": "はじめての「解体」！",
+  "api_type": 4,
+  "id": "F3"
+}

@@ -1,0 +1,13 @@
+{
+  "api_category": 2,
+  "api_detail": "艦隊を出撃させ、敵艦隊と交戦せよ！",
+  "api_get_material": [
+    20,
+    20,
+    0,
+    0
+  ],
+  "api_title": "はじめての「出撃」！",
+  "api_type": 4,
+  "id": "B1"
+}

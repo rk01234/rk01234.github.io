@@ -1,0 +1,16 @@
+{
+  "api_category": 2,
+  "api_detail": "駆逐艦を旗艦とした重巡1隻軽巡1隻駆逐艦4隻からなる水上挺身部隊、沖ノ島沖に突入せよ！",
+  "api_get_material": [
+    0,
+    600,
+    0,
+    200
+  ],
+  "api_title": "「水上反撃部隊」突入せよ！",
+  "api_type": 3,
+  "id": "Bm7",
+  "mandatory_stage": [
+    "2-5"
+  ]
+}
