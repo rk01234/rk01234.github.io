@@ -6036,6 +6036,23 @@
     "api_type": 2,
     "id": "Fw3"
   },
+  "677": {
+    "api_bonus_flag": 1,
+    "api_category": 6,
+    "api_detail": "艦娘の継戦支援体制の整備強化を実施する！「大口径主砲」系装備x4、「水上偵察機」系装備x2、<br>「魚雷」系装備x3を廃棄、鋼材3,600を準備せよ！　※任務達成後、準備した資源は消費します。",
+    "api_get_material": [
+      0,
+      500,
+      0,
+      150
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 3,
+    "api_title": "継戦支援能力の整備",
+    "api_type": 2,
+    "api_voice_id": 0,
+    "id": "Fw4"
+  },
   "678": {
     "api_bonus_flag": 1,
     "api_category": 6,
@@ -7952,6 +7969,33 @@
       "2-3",
       "3-2",
       "4-2"
+    ]
+  },
+  "887": {
+    "api_bonus_flag": 1,
+    "api_category": 8,
+    "api_detail": "精鋭「第十八戦隊」随伴駆逐艦2隻を含む艦隊を、鎮守府海域に展開。同南西諸島沖海域、南西諸島<br>防衛線、鎮守府近海、鎮守府近海航路の各作戦を完全成功させよ！改装軽巡「天龍」「龍田」、出撃！",
+    "api_get_material": [
+      0,
+      1000,
+      0,
+      800
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "精鋭「第十八戦隊」、展開せよ！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "B120",
+    "mandatory_ships": [
+      "天龍改二",
+      "龍田改二"
+    ],
+    "mandatory_stage": [
+      "1-2",
+      "1-4",
+      "1-5",
+      "1-6"
     ]
   },
   "890": {
