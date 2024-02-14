@@ -2615,10 +2615,46 @@
     ],
     "api_invalid_flag": 0,
     "api_label_type": 1,
+    "api_select_rewards": [
+      [
+        {
+          "api_count": 6,
+          "api_kind": 13,
+          "api_mst_id": 3,
+          "api_no": 1
+        },
+        {
+          "api_count": 4,
+          "api_kind": 13,
+          "api_mst_id": 1,
+          "api_no": 2
+        },
+        {
+          "api_count": 1,
+          "api_kind": 13,
+          "api_mst_id": 52,
+          "api_no": 3
+        }
+      ],
+      [
+        {
+          "api_count": 1,
+          "api_kind": 13,
+          "api_mst_id": 54,
+          "api_no": 1
+        },
+        {
+          "api_count": 1,
+          "api_kind": 13,
+          "api_mst_id": 903,
+          "api_no": 2
+        }
+      ]
+    ],
     "api_title": "バレンタイン2024限定任務【一号作戦】",
     "api_type": 4,
     "api_voice_id": 0,
-    "id": "empty",
+    "id": "2402B1",
     "mandatory_stage": [
       "1-3",
       "1-4",
@@ -2639,6 +2675,46 @@
         "迅鯨",
         "伊201",
         "伊203"
+      ]
+    }
+  },
+  "238": {
+    "api_bonus_flag": 1,
+    "api_category": 2,
+    "api_detail": "「浜風」「藤波」「浜波」「早波」「秋霜」「高波」「涼波」「狭霧」「明石」「Perth」「South Dakota」<br>「鹿島」のうち2隻以上を含む艦隊で南西諸島近海、北方モーレイ海、キス島沖、カレー洋海域を哨戒せよ！",
+    "api_get_material": [
+      0,
+      2024,
+      214,
+      214
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "バレンタイン2024限定任務【二号作戦】",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "2402B2",
+    "mandatory_stage": [
+      "2-1",
+      "3-1",
+      "3-2",
+      "4-2"
+    ],
+    "selectable_ships": {
+      "count": "2",
+      "ships": [
+        "浜風",
+        "藤波",
+        "浜波",
+        "早波",
+        "秋霜",
+        "高波",
+        "涼波",
+        "狭霧",
+        "明石",
+        "Perth",
+        "South Dakota",
+        "鹿島"
       ]
     }
   },
@@ -4281,6 +4357,23 @@
     "api_type": 5,
     "api_voice_id": 0,
     "id": "Cy3"
+  },
+  "349": {
+    "api_bonus_flag": 1,
+    "api_category": 3,
+    "api_detail": "バレンタイン限定演習任務：水上機母艦1隻、重巡級1隻、軽巡級1隻、駆逐艦2隻を配備した特別演習<br>艦隊を編成、同特別演習艦隊により本日中に演習で【S判定】以上の勝利を4回以上達成せよ！",
+    "api_get_material": [
+      0,
+      0,
+      214,
+      2024
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "バレンタイン2024限定任務【特別演習】",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "2402C1"
   },
   "354": {
     "api_bonus_flag": 1,
