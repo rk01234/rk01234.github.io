@@ -4375,6 +4375,29 @@
     "api_voice_id": 0,
     "id": "2402C1"
   },
+  "350": {
+    "api_bonus_flag": 1,
+    "api_category": 3,
+    "api_detail": "七駆演習任務：第七駆逐隊「朧」「曙」「漣」「潮」の4隻を含む演習艦隊を編成、<br>本日中に【A判定】勝利3回以上達成せよ。精鋭第七駆逐隊、演習開始！",
+    "api_get_material": [
+      350,
+      350,
+      350,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 103,
+    "api_title": "精鋭「第七駆逐隊」演習開始！",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Cy4",
+    "mandatory_ships": [
+      "朧",
+      "曙",
+      "漣",
+      "潮"
+    ]
+  },
   "354": {
     "api_bonus_flag": 1,
     "api_category": 3,
@@ -4860,6 +4883,23 @@
     "api_voice_id": 0,
     "id": "Dy1"
   },
+  "436": {
+    "api_bonus_flag": 1,
+    "api_category": 4,
+    "api_detail": "練習航海及び警備任務：「練習航海」「長距離練習航海」「警備任務」「対潜警戒任務」<br>「強行偵察任務」の各遠征任務を、軽巡・駆逐艦・海防艦などの艦艇で実施せよ！",
+    "api_get_material": [
+      400,
+      400,
+      400,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 103,
+    "api_title": "練習航海及び警備任務を実施せよ！",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Dy2"
+  },
   "438": {
     "api_bonus_flag": 1,
     "api_category": 4,
@@ -4973,6 +5013,23 @@
     "api_type": 4,
     "api_voice_id": 0,
     "id": "D39"
+  },
+  "444": {
+    "api_bonus_flag": 1,
+    "api_category": 4,
+    "api_detail": "新兵装開発資材輸送護衛：「海上護衛任務」「資源輸送任務」「タンカー護衛任務」<br>「南西方面航空偵察作戦」「ボーキサイト輸送任務」遠征を実施、これを成功させよ！",
+    "api_get_material": [
+      1000,
+      300,
+      300,
+      600
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 103,
+    "api_title": "新兵装開発資材輸送を船団護衛せよ！",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Dy8"
   },
   "445": {
     "api_bonus_flag": 1,
