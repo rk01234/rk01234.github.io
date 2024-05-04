@@ -1,3 +1,4 @@
+<!-- https://rk01234.github.io/ -->
 <!-- 手直ししたいところいっぱいあるけど公開してみる -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -5,219 +6,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nincolle Viewer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <script type="text/JavaScript">
-        var dataMapping = {}; // グローバル変数の定義
-
+        console.log(new Date().toLocaleString() + ' : Loading script...');
+        var quest_details = {};
+    
         window.onload = function() {
-            loadData();
-            let hash = decodeURIComponent(window.location.hash.substring(1)); // "#"を除去し、デコード
-            document.getElementById('userInput').value = hash;
-            if (hash && isJsonString(hash)) {
-                let jsonData = JSON.parse(hash);
-                document.getElementById('submitButton').click();
-            }
-        }
-        function isJsonString(str) {
-            try {
-                JSON.parse(str);
-            } catch (e) {
-                return false;
-            }
-            return true;
-        }
-
-        function loadData() {
-            fetch('quest_detail.json')
+            fetch('quest_details.json')
                 .then(response => response.json())
-                .then(data => {
-                    dataMapping.quest = data;
-                    console.log("loaded quest_detail.json");
-                    console.log(dataMapping.quest);
-                    return fetch('ships_detail.csv');
-                })
-                .then(response => response.text())
-                .then(data => {
-                    dataMapping.ships = data.split(/\r\n|\n/).map((row, index) => [0, ...row.split(',')]);
-                    console.log("loaded ships_detail.csv");
-                    console.log(dataMapping.ships);
+                .then(questData => {
+                    quest_details = questData;
+                    console.log(quest_details);
+                    console.log(new Date().toLocaleString() + ' : window.onload finished');
+    
+                    let hash = decodeURIComponent(window.location.hash.substring(1));
+                    if (hash) {
+                        document.getElementById('userInput').value = hash;
+                        // handleButtonClickを実行
+                        handleButtonClick();
+                    }
                 });
         }
     </script>
+    <!-- script.jsの読み込み -->
+    <script src="script.js"></script>
+    <script src="sort.js"></script>
 </head>
 <body>
 
 <h1>Nincolle Viewer</h1>
-
 <!-- データ入力フォームの追加 -->
 <form id="data-input-form">
-    <textarea 
-    id="userInput" rows="4" cols="50"
-    placeholder='questlistのresponceを入れてください。&#13;&#10;index.html#{"api_no_list":[1,2,3]}&#13;&#10;index.html#{"api_id_list":[A1,B5,C1]}&#13;&#10;のような使い方もできます。混ぜることはできません。'></textarea>
-    <button id="submitButton" type="button" onclick="processInput()">Submit</button>
-    <label><input type="checkbox" id="shipsDisplay"> 必要艦表示</label>
-    <label><input type="checkbox" id="idOnlyMode" checked> ID Only Mode</label>
+    <textarea id="userInput" rows="4" cols="50" placeholder='questlistのresponceを入れてください。&#13;&#10;index.html#{"api_no_list":[1,2,3]}&#13;&#10;のような使い方もできます。'></textarea>
+    <button id="displayButton" type="button" onclick="handleButtonClick()">まとめる！</button>
 </form>
-
-<div id="grid">
-    <div></div>
-    <div class="fixed">鎮守府海域</div>
-    <div class="fixed">南西諸島海域</div>
-    <div class="fixed">北方海域</div>
-    <div class="fixed">南西海域</div>
-    <div class="fixed">西方海域</div>
-    <div class="fixed">南方海域</div>
-    <div class="fixed">中部海域</div>
-    <!-- <div class="fixed">1</div> -->
-    
-    <div></div>
-    <div class="fixed">1</div>
-    <div class="fixed">2</div>
-    <div class="fixed">3</div>
-    <div class="fixed">7</div>
-    <div class="fixed">4</div>
-    <div class="fixed">5</div>
-    <div class="fixed">6</div>
-
-    <div class="fixed">1</div>
-    <div id="cell-1-1" class="grid-cell"></div>
-    <div id="cell-2-1" class="grid-cell"></div>
-    <div id="cell-3-1" class="grid-cell"></div>
-    <div id="cell-7-1" class="grid-cell"></div>
-    <div id="cell-4-1" class="grid-cell"></div>
-    <div id="cell-5-1" class="grid-cell"></div>
-    <div id="cell-6-1" class="grid-cell"></div>
-
-    <div class="fixed">2</div>
-    <div id="cell-1-2" class="grid-cell"></div>
-    <div id="cell-2-2" class="grid-cell"></div>
-    <div id="cell-3-2" class="grid-cell"></div>
-    <div id="split-stage">
-        <div class="fixed">1</div>
-        <div id="cell-7-2-1" class="grid-cell"></div>
-        <div class="fixed">2</div>
-        <div id="cell-7-2-2" class="grid-cell"></div>
-    </div>
-    <div id="cell-4-2" class="grid-cell"></div>
-    <div id="cell-5-2" class="grid-cell"></div>
-    <div id="cell-6-2" class="grid-cell"></div>
-
-    <div class="fixed">3</div>
-    <div id="cell-1-3" class="grid-cell"></div>
-    <div id="cell-2-3" class="grid-cell"></div>
-    <div id="cell-3-3" class="grid-cell"></div>
-    <div id="split-stage">
-        <div class="fixed">1</div>
-        <div id="cell-7-3-1" class="grid-cell"></div>
-        <div class="fixed">2</div>
-        <div id="cell-7-3-2" class="grid-cell"></div>
-    </div>
-    <div id="cell-4-3" class="grid-cell"></div>
-    <div id="cell-5-3" class="grid-cell"></div>
-    <div id="cell-6-3" class="grid-cell"></div>
-
-    <div class="fixed">4</div>
-    <div id="cell-1-4" class="grid-cell"></div>
-    <div id="cell-2-4" class="grid-cell"></div>
-    <div id="cell-3-4" class="grid-cell"></div>
-    <div id="cell-7-4" class="grid-cell"></div>
-    <div id="cell-4-4" class="grid-cell"></div>
-    <div id="cell-5-4" class="grid-cell"></div>
-    <div id="cell-6-4" class="grid-cell"></div>
-
-    <div class="fixed">5</div>
-    <div id="cell-1-5" class="grid-cell"></div>
-    <div id="cell-2-5" class="grid-cell"></div>
-    <div id="cell-3-5" class="grid-cell"></div>
-    <div id="split-stage">
-        <div class="fixed">1</div>
-        <div id="cell-7-5-1" class="grid-cell"></div>
-        <div class="fixed">2</div>
-        <div id="cell-7-5-2" class="grid-cell"></div>
-        <div class="fixed">3</div>
-        <div id="cell-7-5-3" class="grid-cell"></div>
-    </div>
-    <div id="cell-4-5" class="grid-cell"></div>
-    <div id="cell-5-5" class="grid-cell"></div>
-    <div id="cell-6-5" class="grid-cell"></div>
-
-    <div class="fixed">6</div>
-    <div id="cell-1-6" class="grid-cell"></div>
-    <div id="cell-2-6" class="grid-cell">進出不可</div>
-    <div id="cell-3-6" class="grid-cell">進出不可</div>
-    <div id="cell-7-6" class="grid-cell">進出不可</div>
-    <div id="cell-4-6" class="grid-cell">進出不可</div>
-    <div id="cell-5-6" class="grid-cell">進出不可</div>
-    <div id="cell-6-6" class="grid-cell">進出不可</div>
-
-    <div class="fixed">7</div>
-    <div id="cell-1-7" class="grid-cell">進出不可</div>
-    <div id="cell-2-7" class="grid-cell">進出不可</div>
-    <div id="cell-3-7" class="grid-cell">進出不可</div>
-    <div id="cell-7-7" class="grid-cell">進出不可</div>
-    <div id="cell-4-7" class="grid-cell">進出不可</div>
-    <div id="cell-5-7" class="grid-cell">進出不可</div>
-    <div id="cell-6-7" class="grid-cell">進出不可</div>
-    <!-- data-->
+<!-- 任務名、海域の二次元配列テーブルを作り、任務名をクリックすると文字列ソート、海域をクリックすると中身があるものをソートするようにする -->
+<!-- 最上部は大ステージ、二段目は小ステージ、三段目以降はデータを入れるようにする -->
+<table id="quest_board" border="3">
+    <thead>
+        <tr>
+            <th rowspan="3">ID</th>
+            <th rowspan="3">任務</th>
+            <th colspan="6">(1) 鎮守府海域</th>
+            <th colspan="5">(2) 南西諸島海域</th>
+            <th colspan="5">(3) 北方海域</th>
+            <th colspan="9">(7) 南西海域</th>
+            <th colspan="5">(4) 西方海域</th>
+            <th colspan="5">(5) 南方海域</th>
+            <th colspan="5">(6) 中部海域</th>
+        </tr>
+        <tr>
+            <th id="stage_1-1" rowspan="2" onclick="SortTest(event)">1</th>
+            <th id="stage_1-2" rowspan="2" onclick="SortTest(event)">2</th>
+            <th id="stage_1-3" rowspan="2" onclick="SortTest(event)">3</th>
+            <th id="stage_1-4" rowspan="2" onclick="SortTest(event)">4</th>
+            <th id="stage_1-5" rowspan="2" onclick="SortTest(event)">5</th>
+            <th id="stage_1-6" rowspan="2" onclick="SortTest(event)">6</th>
+            <th id="stage_2-1" rowspan="2" onclick="SortTest(event)">1</th>
+            <th id="stage_2-2" rowspan="2" onclick="SortTest(event)">2</th>
+            <th id="stage_2-3" rowspan="2" onclick="SortTest(event)">3</th>
+            <th id="stage_2-4" rowspan="2" onclick="SortTest(event)">4</th>
+            <th id="stage_2-5" rowspan="2" onclick="SortTest(event)">5</th>
+            <th id="stage_3-1" rowspan="2" onclick="SortTest(event)">1</th>
+            <th id="stage_3-2" rowspan="2" onclick="SortTest(event)">2</th>
+            <th id="stage_3-3" rowspan="2" onclick="SortTest(event)">3</th>
+            <th id="stage_3-4" rowspan="2" onclick="SortTest(event)">4</th>
+            <th id="stage_3-5" rowspan="2" onclick="SortTest(event)">5</th>
+            <th id="stage_7-1" rowspan="2" onclick="SortTest(event)">1</th>
+            <th colspan="2">2</th>
+            <th colspan="2">3</th>
+            <th id="stage_7-4" rowspan="2" onclick="SortTest(event)">4</th>
+            <th colspan="3">5</th>
+            <th id="stage_4-1" rowspan="2" onclick="SortTest(event)">1</th>
+            <th id="stage_4-2" rowspan="2" onclick="SortTest(event)">2</th>
+            <th id="stage_4-3" rowspan="2" onclick="SortTest(event)">3</th>
+            <th id="stage_4-4" rowspan="2" onclick="SortTest(event)">4</th>
+            <th id="stage_4-5" rowspan="2" onclick="SortTest(event)">5</th>
+            <th id="stage_5-1" rowspan="2" onclick="SortTest(event)">1</th>
+            <th id="stage_5-2" rowspan="2" onclick="SortTest(event)">2</th>
+            <th id="stage_5-3" rowspan="2" onclick="SortTest(event)">3</th>
+            <th id="stage_5-4" rowspan="2" onclick="SortTest(event)">4</th>
+            <th id="stage_5-5" rowspan="2" onclick="SortTest(event)">5</th>
+            <th id="stage_6-1" rowspan="2" onclick="SortTest(event)">1</th>
+            <th id="stage_6-2" rowspan="2" onclick="SortTest(event)">2</th>
+            <th id="stage_6-3" rowspan="2" onclick="SortTest(event)">3</th>
+            <th id="stage_6-4" rowspan="2" onclick="SortTest(event)">4</th>
+            <th id="stage_6-5" rowspan="2" onclick="SortTest(event)">5</th>
+            
+        </tr>
+        <tr>
+            <th id="stage_7-2-1" onclick="SortTest(event)"><small id="stage_7-2-1">1</small></th>
+            <th id="stage_7-2-2" onclick="SortTest(event)"><small id="stage_7-2-2">2</small></th>
+            <th id="stage_7-3-1" onclick="SortTest(event)"><small id="stage_7-3-1">1</small></th>
+            <th id="stage_7-3-2" onclick="SortTest(event)"><small id="stage_7-3-2">2</small></th>
+            <th id="stage_7-5-1" onclick="SortTest(event)"><small id="stage_7-5-1">1</small></th>
+            <th id="stage_7-5-2" onclick="SortTest(event)"><small id="stage_7-5-2">2</small></th>
+            <th id="stage_7-5-3" onclick="SortTest(event)"><small id="stage_7-5-3">3</small></th>
+        </tr>
+    </thead>
+    <tbody id="quest_table">
+    </tbody>
+</table>
+<!-- リンク作成ボタン・リンク表示テキストエリア・コピーボタン・ブックマークに追加ボタンを横一列に表示 -->
+<!-- リンク表示テキストエリアはクリックすると全体範囲選択になるようにする -->
+<div id="link-area">
+    <button id="createLinkButton" type="button" onclick="createLink()">リンク作成</button>
+    <input type="text" id="linkText" size="50" onclick="this.select()">
+    <button id="copyButton" type="button" onclick="copyLink()">コピー</button>
+    <!-- <button id="bookmarkButton" type="button" onclick="bookmarkLink()">ブックマークに追加</button> -->
 </div>
-
-    <div id="json-values-display"></div>
-
-    <!-- テキストボックスとコピーするボタンの追加 -->
-<div id="harfDisplay">
-    <div>
-        <div id="mandatory_ships-title" onclick="toggleDisplayMandatory()">>>必要艦</div>
-        <div id="mandatory_ships-display" style="display: none;"></div>
-        <!-- "必要艦"という文字をクリックすると表示・非表示が切り替わるようにします -->
-        <textarea id="copy-textA" rows="4" cols="50"></textarea>
-        <br>
-        <button id="copy-buttonA" onclick="copyTextA()">コピー</button>
-    </div>
-    <div>
-        <div id="selectable_ships-title" onclick="toggleDisplaySelectable()">>>選択艦</div>
-        <div id="selectable_ships-display" style="display: none;"></div>
-        <textarea id="copy-textB" rows="4" cols="50"></textarea>
-        <br>
-        <button id="copy-buttonB" onclick="copyTextB()">コピー</button>
-
-    </div>
-</div>
-<div id="nonValueQuests"></div>
-<!-- 新しい JavaScript ファイルを読み込む -->
-<script src="script.js"></script>
-<script>
-    // テキストボックスの内容をコピーする関数
-    function copyTextA() {
-        var copyTextA = document.getElementById("copy-textA");
-        copyTextA.select();
-        document.execCommand("copy");
-    }
-    // 表示・非表示を切り替える関数
-    function toggleDisplayMandatory() {
-        let displayElement = document.getElementById('mandatory_ships-display');
-        if (displayElement.style.display === "none") {
-            displayElement.style.display = "block";
-        } else {
-            displayElement.style.display = "none";
-        }
-    }
-
-    // テキストボックスBの内容をコピーする関数
-    function copyTextB() {
-        var copyTextB = document.getElementById("copy-textB");
-        copyTextB.select();
-        document.execCommand("copy");
-    }
-    // 表示・非表示を切り替える関数
-    function toggleDisplaySelectable() {
-        let displayElement = document.getElementById('selectable_ships-display');
-        if (displayElement.style.display === "none") {
-            displayElement.style.display = "block";
-        } else {
-            displayElement.style.display = "none";
-        }
-    }
-</script>
+<script src="link_area.js"></script>
+申し訳ないです、工事中です。
+データは<a href="https://github.com/rk01234/rk01234.github.io">こちら</a>にあります。
 </body>
 </html>
