@@ -23,7 +23,7 @@ function handleButtonClick() {
     }
     // json形式に変換
     let obj = JSON.parse(json);
-    // console.log(obj);
+    console.log(obj);
 
     // api_dataがある場合、{"api_data":"api_list":[]}を取り出しinput_dataに追加
     if (obj.api_data) {
@@ -33,8 +33,12 @@ function handleButtonClick() {
         // {"api_no_list":[1,2,3...]}を[{api_no:1},{api_no:2},{api_no:3}...]に変換
         var input_data = obj.api_no_list.map(function (x) { return { api_no: x }; });
     }
+    // keyが全部数字なら、input_dataにそのまま追加
+    else if (Object.keys(obj).every(function (x) { return !isNaN(x); })) {
+        var input_data = Object.keys(obj).map(function (x) { return { api_no: x }; });
+    }
 
-    // console.log(input_data);
+    console.log(input_data);
 
     //  input_dataをforで回し、api_noがquest_detailsにある場合、<tbody id="quest_table">に追加していく
     // 

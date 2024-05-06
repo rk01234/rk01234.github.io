@@ -16,7 +16,7 @@ function createLink() {
     }
     // json形式に変換
     let obj = JSON.parse(json);
-    // console.log(obj);
+    console.log(obj);
 
     // api_dataがある場合、{"api_data":"api_list":[]}を取り出しinput_dataに追加
     if (obj.api_data) {
@@ -30,6 +30,7 @@ function createLink() {
         // {"api_no_list":[1,2,3...]}をnumberListに追加
         numberList = obj.api_no_list;
     }
+    
     console.log(numberList);
     // {"api_no_list":[1,2,3...]}の形式にして、id="linkText"に表示
     document.getElementById("linkText").value = "https://rk01234.github.io/#" + JSON.stringify({ api_no_list: numberList });
