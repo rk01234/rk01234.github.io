@@ -1638,6 +1638,27 @@
       "島風"
     ]
   },
+  "158": {
+    "api_bonus_flag": 1,
+    "api_category": 1,
+    "api_detail": "主力戦艦編成任務：第一艦隊旗艦に「長門改二」、同二番艦に「陸奥改二」から構成される<br>第一戦隊を配備、精鋭無比の水上打撃艦隊を編成せよ！",
+    "api_get_material": [
+      0,
+      800,
+      800,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "精鋭無比「第一戦隊」抜錨準備！",
+    "api_type": 4,
+    "api_voice_id": 1158,
+    "id": "A92",
+    "mandatory_ships": [
+      "長門改二",
+      "陸奥改二"
+    ]
+  },
   "161": {
     "api_category": 1,
     "api_detail": "「翔鶴」「瑞鶴」と随伴駆逐艦「朧」「秋雲」を基幹とした第五航空戦隊を再編成せよ！",
@@ -6525,16 +6546,20 @@
     "id": "Fq9"
   },
   "656": {
+    "api_bonus_flag": 1,
     "api_category": 6,
-    "api_detail": "秘書艦に「伊401」または「伊14」または「伊13」を配備。「晴嵐」を一番スロットに搭載。「瑞雲(六三一空)」を二番スロットに搭載。「晴嵐(六三一空)」を新編せよ！　※任務達成後瑞雲は消滅します。",
+    "api_detail": "秘書艦に「伊401」または「伊14」または「伊13」を配備。「晴嵐」を一番スロットに搭載。「瑞雲(六三<br>一空)」を二番スロットに搭載。「晴嵐(六三一空)」を新編せよ！　※任務達成後瑞雲は消滅します。",
     "api_get_material": [
       0,
       0,
       0,
       0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "六三一空「晴嵐」隊の編成",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "F49",
     "selectable_ships": {
       "count": "1",
@@ -7513,6 +7538,7 @@
     ]
   },
   "815": {
+    "api_bonus_flag": 1,
     "api_category": 8,
     "api_detail": "旗艦「赤城」同僚艦「加賀」を中核とする艦隊で、深海東洋艦隊漸減作戦を貫徹せよ！",
     "api_get_material": [
@@ -7521,8 +7547,11 @@
       0,
       800
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "「第一航空戦隊」西へ！",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "B69",
     "mandatory_ships": [
       "赤城",
@@ -8126,6 +8155,7 @@
     }
   },
   "844": {
+    "api_bonus_flag": 1,
     "api_category": 8,
     "api_detail": "「荒潮改二」を旗艦とし、僚艦に「第八駆逐隊」から1隻を配備した精鋭第1艦隊で<br>サーモン海域北方に突入、同方面に接近する有力な敵艦隊を捕捉、同方面の敵戦力の漸減に努めよ！",
     "api_get_material": [
@@ -8134,8 +8164,11 @@
       0,
       800
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "精鋭「第八駆逐隊」突入せよ！",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "B90",
     "mandatory_ships": [
       "荒潮改二"
@@ -8178,6 +8211,7 @@
     ]
   },
   "846": {
+    "api_bonus_flag": 1,
     "api_category": 8,
     "api_detail": "潜水艦を旗艦とし、4隻以上の有力な潜水艦を配備した第一艦隊、精鋭潜水艦隊で<br>中部海域哨戒線に進出、回航中の敵空母を捕捉、これを襲撃せよ！",
     "api_get_material": [
@@ -8186,8 +8220,11 @@
       300,
       0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "潜水艦隊、中部海域の哨戒を実施せよ！",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "B91",
     "mandatory_stage": [
       "6-1"
@@ -8221,16 +8258,20 @@
     ]
   },
   "848": {
+    "api_bonus_flag": 1,
     "api_category": 8,
-    "api_detail": "第一艦隊旗艦に「Zara due」を配備、同艦隊で南方サブ島沖海域へ突入！同方面の敵艦隊群を突破し、鉄底海峡に展開する敵戦力を撃破せよ！",
+    "api_detail": "第一艦隊旗艦に「Zara due」を配備、同艦隊で南方サブ島沖海域へ突入！同方面の敵艦隊群を突破し、鉄<br>底海峡に展開する敵戦力を撃破せよ！",
     "api_get_material": [
       0,
       0,
       700,
       0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "重装甲巡洋艦、鉄底海峡に突入せよ！",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "B92",
     "mandatory_ships": [
       "Zara due"
@@ -8263,6 +8304,7 @@
     ]
   },
   "850": {
+    "api_bonus_flag": 1,
     "api_category": 8,
     "api_detail": "航空母艦、または水上機母艦を旗艦とした有力な艦隊を編成、北方AL海域、<br>西方海域カスガダマ沖 、中部海域MS諸島沖に展開し、各海域の敵艦隊を撃滅せよ！",
     "api_get_material": [
@@ -8271,8 +8313,11 @@
       0,
       1000
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "洋上航空戦力を拡充せよ！",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "B94",
     "mandatory_stage": [
       "3-5",
@@ -8349,6 +8394,7 @@
     ]
   },
   "854": {
+    "api_bonus_flag": 1,
     "api_category": 8,
     "api_detail": "戦果拡張作戦：我が第一艦隊に精鋭艦艇を集中配備、同精鋭艦隊を以て、南西諸島の沖ノ島海域、<br>中部海域哨戒線、グアノ環礁沖の敵艦隊を撃破、中部北海域ピーコック島の敵戦力を破砕殲滅せよ！",
     "api_get_material": [
@@ -8357,8 +8403,11 @@
       0,
       0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 7,
     "api_title": "戦果拡張任務！「Z作戦」前段作戦",
     "api_type": 5,
+    "api_voice_id": 0,
     "id": "Bq2",
     "mandatory_stage": [
       "2-4",

@@ -30,7 +30,10 @@ function createLink() {
         // {"api_no_list":[1,2,3...]}をnumberListに追加
         numberList = obj.api_no_list;
     }
-    
+    else if (Object.keys(obj).every(function (x) { return !isNaN(x); })) {
+        // keyが全部数字なら、numberListにそのまま追加
+        numberList = Object.keys(obj);
+    }
     console.log(numberList);
     // {"api_no_list":[1,2,3...]}の形式にして、id="linkText"に表示
     document.getElementById("linkText").value = "https://rk01234.github.io/#" + JSON.stringify({ api_no_list: numberList });
