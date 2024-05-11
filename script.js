@@ -1,4 +1,5 @@
 
+// jsなんもわからん
 // ボタンが押された時の処理
 function handleButtonClick() {
     // stageの内容を入れる配列
@@ -26,10 +27,10 @@ function handleButtonClick() {
     console.log(obj);
 
     // api_dataがある場合、{"api_data":"api_list":[]}を取り出しinput_dataに追加
-    if (obj.api_data) {
+    if ("api_data" in obj) {
         var input_data = obj.api_data.api_list;
     }
-    else if (obj.api_no_list) {
+    else if ("api_no_list" in obj) {
         // {"api_no_list":[1,2,3...]}を[{api_no:1},{api_no:2},{api_no:3}...]に変換
         var input_data = obj.api_no_list.map(function (x) { return { api_no: x }; });
     }
@@ -45,7 +46,7 @@ function handleButtonClick() {
     for (let i = 0; i < input_data.length; i++) {
         let api_no = String(input_data[i].api_no);
         // quest_detailsのapi_no内にid
-        if (quest_details[api_no].id) {
+        if ("id" in quest_details[api_no]) {
             displayData.push( quest_details[api_no]);
         }
         else {
@@ -80,12 +81,12 @@ function handleButtonClick() {
 
         }
 
-        if (displayData[i].mandatory_stage) {
+        if ("mandatory_stage" in displayData[i]) {
             for (let j = 0; j < displayData[i].mandatory_stage.length; j++) {
                 row.cells.namedItem("stage_" + displayData[i].mandatory_stage[j]).innerHTML = "●";
             }
         }
-        if (displayData[i].selectable_stage) {
+        if ("selectable_stage" in displayData[i]) {
             for (let j = 0; j < displayData[i].selectable_stage.length; j++) {
                 row.cells.namedItem("stage_" + displayData[i].selectable_stage[j]).innerHTML = "○";
             }

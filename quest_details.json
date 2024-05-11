@@ -418,6 +418,23 @@
       "羽黒"
     ]
   },
+  "1103": {
+    "api_bonus_flag": 1,
+    "api_category": 11,
+    "api_detail": "「61cm三連装(酸素)魚雷」x3廃棄、開発資材x60と「九三式水中聴音機」「13号対空電探改」各x2を<br>準備せよ！　※任務達成後、用意した開発資材及び必要装備(低改修値のもの優先)は消費します。",
+    "api_get_material": [
+      0,
+      100,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 106,
+    "api_title": "潜水艦強化兵装の量産",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Fy5"
+  },
   "1105": {
     "api_bonus_flag": 1,
     "api_category": 11,
@@ -712,6 +729,23 @@
     "mandatory_ships": [
       "深雪改二"
     ]
+  },
+  "1129": {
+    "api_bonus_flag": 1,
+    "api_category": 11,
+    "api_detail": "旗艦に配備した潜水艦の第一装備スロに「後期型艦首魚雷(6門)」(★max) 。開発資材x36、<br>新型兵装資材x2、「61cm三連装(酸素)魚雷」x4、「熟練見張員」x3、弾薬800を準備せよ！",
+    "api_get_material": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "潜水艦魚雷攻撃の精度向上",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "F117"
   },
   "113": {
     "api_category": 1,
@@ -6571,16 +6605,20 @@
     }
   },
   "658": {
+    "api_bonus_flag": 1,
     "api_category": 6,
-    "api_detail": "「61cm三連装魚雷」を四つ廃棄、開発資材x120と「61cm四連装(酸素)魚雷」「九三式水中聴音機」各三つを準備せよ！　※任務達成後、用意した開発資材及び必要装備(低改修値のもの優先)は消費します。",
+    "api_detail": "「61cm三連装魚雷」を四つ廃棄、開発資材x120と「61cm四連装(酸素)魚雷」「九三式水中聴音機」各三<br>つを準備せよ！　※任務達成後、用意した開発資材及び必要装備(低改修値のもの優先)は消費します。",
     "api_get_material": [
       0,
       100,
       0,
       0
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
     "api_title": "潜水艦武装の強化",
     "api_type": 4,
+    "api_voice_id": 0,
     "id": "F50"
   },
   "659": {
@@ -8590,6 +8628,7 @@
     ]
   },
   "862": {
+    "api_bonus_flag": 1,
     "api_category": 8,
     "api_detail": "偵察任務：水上機母艦1隻と軽巡2隻を中核とした偵察艦隊を、中部海域グアノ環礁沖海域に展開、<br>航空偵察作戦「K作戦」を反復実施せよ！さらに同方面の敵艦隊を捕捉、敵戦力の撃破に努めよ！",
     "api_get_material": [
@@ -8598,8 +8637,11 @@
       0,
       1000
     ],
+    "api_invalid_flag": 0,
+    "api_label_type": 7,
     "api_title": "前線の航空偵察を実施せよ！",
     "api_type": 5,
+    "api_voice_id": 0,
     "id": "Bq4",
     "mandatory_stage": [
       "6-3"
