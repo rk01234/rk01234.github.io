@@ -46,8 +46,8 @@ function handleButtonClick() {
     for (let i = 0; i < input_data.length; i++) {
         let api_no = String(input_data[i].api_no);
         // quest_detailsのapi_no内にid
-        if ("id" in quest_details[api_no]) {
-            displayData.push( quest_details[api_no]);
+        if (quest_details[api_no] && "id" in quest_details[api_no]) {
+            displayData.push(quest_details[api_no]);
         }
         else {
             displayData.push({ api_no: api_no, quest_name: "未登録" });

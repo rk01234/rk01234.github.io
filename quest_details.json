@@ -435,6 +435,23 @@
     "api_voice_id": 0,
     "id": "Fy5"
   },
+  "1104": {
+    "api_bonus_flag": 1,
+    "api_category": 11,
+    "api_detail": "「13号対空電探改」x3廃棄、開発資材x100と「九三式水中聴音機」及び「22号対水上電探」各x2を<br>準備せよ！　※任務達成後、用意した開発資材及び必要装備(低改修値のもの優先)は消費します。",
+    "api_get_material": [
+      100,
+      0,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 106,
+    "api_title": "潜水艦電子兵装の量産",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Fy6"
+  },
   "1105": {
     "api_bonus_flag": 1,
     "api_category": 11,
