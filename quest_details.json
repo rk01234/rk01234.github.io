@@ -270,6 +270,58 @@
       "2-1"
     ]
   },
+  "1012": {
+    "api_bonus_flag": 1,
+    "api_category": 10,
+    "api_detail": "鵜来型海防艦を旗艦、随伴に海防艦1～3隻のみの海防艦戦隊を編成。同艦隊で鎮守府正面海域<br>安全の反復徹底確保、さらに鎮守府近海及び鎮守府海域南西諸島沖海域の反復哨戒を実施せよ！",
+    "api_get_material": [
+      320,
+      320,
+      320,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 105,
+    "api_title": "鵜来型海防艦、静かな海を防衛せよ！",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "By14",
+    "mandatory_stage": [
+      "1-1",
+      "1-2",
+      "1-5"
+    ],
+    "selectable_ships": {
+      "count": "1",
+      "ships": [
+        "鵜来",
+        "稲木"
+      ]
+    }
+  },
+  "1013": {
+    "api_bonus_flag": 1,
+    "api_category": 10,
+    "api_detail": "旗艦に八戸の盾、改鵜来型海防艦「稲木改二」を配備した精強な防衛艦隊で、製油所地帯沿岸、<br>南西諸島防衛線、バシー海峡、東部オリョール海、昭南本土航路に展開！敵を撃滅、防衛せよ！",
+    "api_get_material": [
+      800,
+      0,
+      800,
+      800
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "八戸の盾「稲木改二」、抜錨ッ！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "B200",
+    "mandatory_ships": [
+      "稲木改二"
+    ],
+    "mandatory_stage": [
+      "null"
+    ]
+  },
   "102": {
     "api_bonus_flag": 1,
     "api_category": 1,
@@ -880,6 +932,23 @@
     "api_type": 4,
     "api_voice_id": 0,
     "id": "2404F1"
+  },
+  "1137": {
+    "api_bonus_flag": 1,
+    "api_category": 11,
+    "api_detail": "鵜来型海防艦を旗艦、同第一装備スロットに「三式爆雷投射機」を装備。さらに同装備x1及び<br>開発資材x32を準備、「九三式水中聴音機」「九四式爆雷投射機」「九五式爆雷」各x4を廃棄せよ！",
+    "api_get_material": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "鵜来型海防艦兵装の開発",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "F123"
   },
   "114": {
     "api_category": 1,
@@ -4101,6 +4170,33 @@
       "2-1"
     ]
   },
+  "281": {
+    "api_bonus_flag": 1,
+    "api_category": 2,
+    "api_detail": "第一艦隊第一戦隊、改装主力戦艦「長門改二」及び「陸奥改二」を中核とした水上打撃艦隊を編成、<br>バシー海峡、北方AL海域戦闘哨戒、カレー洋リランカ島沖及び南方海域前面の敵を捕捉撃滅せよ！",
+    "api_get_material": [
+      800,
+      800,
+      800,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "精鋭無比「第一戦隊」まかり通る！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "B129",
+    "mandatory_ships": [
+      "長門改二",
+      "陸奥改二"
+    ],
+    "mandatory_stage": [
+      "2-2",
+      "3-5",
+      "4-5",
+      "5-1"
+    ]
+  },
   "283": {
     "api_bonus_flag": 1,
     "api_category": 2,
@@ -4934,6 +5030,23 @@
       "潮"
     ]
   },
+  "353": {
+    "api_bonus_flag": 1,
+    "api_category": 3,
+    "api_detail": "「重巡洋艦」または「航空巡洋艦」、旗艦を含む重巡級4隻による巡洋艦戦隊を基幹とし、<br>随伴駆逐艦2隻による計6隻編成の艦隊で、本日中に5回以上演習で勝利せよ！",
+    "api_get_material": [
+      500,
+      500,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 106,
+    "api_title": "「巡洋艦戦隊」演習！",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Cy5"
+  },
   "354": {
     "api_bonus_flag": 1,
     "api_category": 3,
@@ -5038,6 +5151,23 @@
         "熊野丸"
       ]
     }
+  },
+  "367": {
+    "api_bonus_flag": 1,
+    "api_category": 3,
+    "api_detail": "【梅雨限定任務】海防艦2隻以上または駆逐艦4隻以上を含む演習海上護衛隊を編成！同演習戦隊で<br>本日中に演習において【A判定】勝利を4回以上達成せよ！海上護衛隊各艦、雨中海上演習始めッ！",
+    "api_get_material": [
+      75,
+      75,
+      75,
+      75
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 2,
+    "api_title": "【梅雨限定任務】海上護衛隊、雨中演習！",
+    "api_type": 1,
+    "api_voice_id": 0,
+    "id": "2405C1"
   },
   "371": {
     "api_bonus_flag": 1,
@@ -6998,6 +7128,23 @@
     "api_voice_id": 0,
     "id": "Fy4"
   },
+  "683": {
+    "api_bonus_flag": 1,
+    "api_category": 6,
+    "api_detail": "秘書艦「伊勢改二」一番スロに「試製41cm三連装砲」改修max搭載、「41cm連装砲」x3 「22号対水上<br>電探」x2を廃棄、開発資材x40、高速建造材x50、鋼材4,500、新型砲熕兵装資材x2を準備せよ！",
+    "api_get_material": [
+      0,
+      200,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "航空戦艦用強化型新主砲の研究",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "F74"
+  },
   "686": {
     "api_bonus_flag": 1,
     "api_category": 6,
@@ -8793,6 +8940,29 @@
       "5-4"
     ]
   },
+  "872": {
+    "api_bonus_flag": 1,
+    "api_category": 8,
+    "api_detail": "戦果拡張作戦：我が第一艦隊に精鋭艦艇を集中配備、同精鋭艦隊を以て、南西海域タウイタウイ泊地沖、<br>南方海域サーモン海域北方、中部海域MS諸島沖及びKW環礁沖海域の敵艦隊を捕捉、これを撃滅せよ！",
+    "api_get_material": [
+      0,
+      0,
+      2000,
+      2000
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 7,
+    "api_title": "戦果拡張任務！「Z作戦」後段作戦",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "Bq10",
+    "mandatory_stage": [
+      "7-2-2",
+      "5-5",
+      "6-2",
+      "6-5"
+    ]
+  },
   "873": {
     "api_bonus_flag": 1,
     "api_category": 8,
@@ -8946,6 +9116,54 @@
     ],
     "mandatory_stage": [
       "3-2"
+    ]
+  },
+  "885": {
+    "api_bonus_flag": 1,
+    "api_category": 8,
+    "api_detail": "改装航空戦艦(戦闘航空母艦)一番艦、旗艦「伊勢改二」を中核とした航空火力打撃艦隊を編成、<br>北方AL海域戦闘哨戒、カレー洋リランカ島沖及びピーコック島沖の作戦に投入、敵を撃滅せよ！",
+    "api_get_material": [
+      1000,
+      0,
+      634,
+      634
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "戦闘航空母艦、出撃せよ！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "B118",
+    "mandatory_ships": [
+      "伊勢改二"
+    ],
+    "mandatory_stage": [
+      "3-5",
+      "4-5",
+      "6-4"
+    ]
+  },
+  "886": {
+    "api_bonus_flag": 1,
+    "api_category": 8,
+    "api_detail": "旗艦「伊勢改二」随伴駆逐艦2隻の航空戦隊を基幹とする艦隊をKW環礁沖空母機動部隊迎撃戦に投入！<br>同反復出撃によって、同方面に来襲する敵機動部隊を迎撃、完全撃滅せよ！　「伊勢改二」、抜錨！",
+    "api_get_material": [
+      634,
+      0,
+      1000,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "「伊勢改二」、敵機動部隊を迎撃せよ！",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "B119",
+    "mandatory_ships": [
+      "伊勢改二"
+    ],
+    "mandatory_stage": [
+      "6-5"
     ]
   },
   "887": {
@@ -9678,6 +9896,28 @@
       "7-2-2"
     ]
   },
+  "944": {
+    "api_bonus_flag": 1,
+    "api_category": 9,
+    "api_detail": "旗艦に「重巡洋艦」または「駆逐艦」、随伴に「駆逐艦・海防艦」より旗艦含めず3隻以上(他自由)の<br>艦隊で、南西諸島沖、製油所地帯沿岸、南西諸島防衛線へ反復出撃！敵艦隊の撃破に努めよ！",
+    "api_get_material": [
+      200,
+      200,
+      0,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 106,
+    "api_title": "鎮守府近海海域の哨戒を実施せよ！",
+    "api_type": 5,
+    "api_voice_id": 0,
+    "id": "By6",
+    "mandatory_stage": [
+      "1-2",
+      "1-3",
+      "1-4"
+    ]
+  },
   "945": {
     "api_bonus_flag": 1,
     "api_category": 9,
@@ -9770,6 +10010,75 @@
       "1-4",
       "2-1",
       "2-2"
+    ]
+  },
+  "953": {
+    "api_bonus_flag": 1,
+    "api_category": 9,
+    "api_detail": "【梅雨限定任務】巡洋艦を旗艦、他に水上機母艦、駆逐艦、海防艦各1隻以上を含む艦隊で、<br>南西諸島近海、バシー海峡、東部オリョール海を哨戒！南西諸島海域の防衛に努めよ！",
+    "api_get_material": [
+      150,
+      150,
+      150,
+      150
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 3,
+    "api_title": "【梅雨限定任務】雨の南西諸島防衛戦！",
+    "api_type": 2,
+    "api_voice_id": 0,
+    "id": "2405B3",
+    "mandatory_stage": [
+      "2-1",
+      "2-2",
+      "2-3"
+    ]
+  },
+  "954": {
+    "api_bonus_flag": 1,
+    "api_category": 9,
+    "api_detail": "【梅雨限定任務】駆逐艦を旗艦、海防艦2隻以上を含む海上護衛隊を編成。同艦隊を南西諸島沖、<br>製油所地帯沿岸、鎮守府近海に展開！さらに鎮守府近海航路の海上護衛作戦を反復実施せよ！",
+    "api_get_material": [
+      750,
+      750,
+      750,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 3,
+    "api_title": "【梅雨拡張任務】梅雨の海上護衛強化！",
+    "api_type": 2,
+    "api_voice_id": 0,
+    "id": "2405B4",
+    "mandatory_stage": [
+      "1-2",
+      "1-3",
+      "1-5",
+      "1-6"
+    ]
+  },
+  "955": {
+    "api_bonus_flag": 1,
+    "api_category": 9,
+    "api_detail": "【梅雨限定任務】航空母艦2隻以上、さらに球磨型・大淀型のいずれか1隻を含む艦隊で西方海域<br>方面に進出！西方海域の全五作戦海域に展開し、同方面の敵戦力の撃滅を図れ！艦隊、出撃！",
+    "api_get_material": [
+      1100,
+      1100,
+      1100,
+      0
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 6,
+    "api_title": "【梅雨限定月間任務】西方海域統合作戦",
+    "api_type": 3,
+    "api_voice_id": 0,
+    "id": "2405B5",
+    "mandatory_stage": [
+      "4-1",
+      "4-2",
+      "4-3",
+      "4-4",
+      "4-5"
     ]
   },
   "957": {
