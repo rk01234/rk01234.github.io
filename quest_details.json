@@ -4197,6 +4197,32 @@
       "5-1"
     ]
   },
+  "282": {
+    "api_bonus_flag": 1,
+    "api_category": 2,
+    "api_detail": "第一艦隊第一戦隊、改装主力戦艦「長門改二」及び「陸奥改二」を中核とした精鋭水上打撃艦隊を展開、<br>南西諸島海域沖ノ島沖、南方海域サーモン海域北方、中部海域ピーコック島沖の敵戦力を撃滅せよ！",
+    "api_get_material": [
+      1000,
+      1000,
+      1000,
+      1000
+    ],
+    "api_invalid_flag": 0,
+    "api_label_type": 1,
+    "api_title": "精鋭無比「第一戦隊」まかり通る！【拡張作戦】",
+    "api_type": 4,
+    "api_voice_id": 0,
+    "id": "B130",
+    "mandatory_ships": [
+      "長門改二",
+      "陸奥改二"
+    ],
+    "mandatory_stage": [
+      "2-5",
+      "5-5",
+      "6-4"
+    ]
+  },
   "283": {
     "api_bonus_flag": 1,
     "api_category": 2,
